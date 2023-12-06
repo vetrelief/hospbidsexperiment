@@ -1,3 +1,7 @@
+<?php
+	VRS_RUNTIME_WWW::HTML_TITLE(VRS_SITE::DEFAULT_TITLE_HOSPITAL);
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -93,8 +97,87 @@ content="width=device-width, initial-scale=1.0">
     <div class="lightbox-buttons">
       <button id="boost-button">Boost Selected Dates</button>
       <button id="close-button">Cancel</button>
-    </div>
-  </div>
+
+      <style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .announcement {
+    background-color: #d4ffbd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .announcement h2 {
+    color: #00a300;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .announcement p {
+    color: #00529b;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .announcement a {
+    color: #ffc900;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .beta-testing {
+    background-color: #feebc2;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+
+  .beta-testing h3 {
+    color: #9b0000;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .beta-testing p {
+    color: #000;
+    font-size: 14px;
+  }
+
+  .beta-testing img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .button {
+    background-color: #28b485;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="announcement">
+  <h2>VetRelief.pet</h2>
+  <h3>Virtual Veterinary Telehealth Consultations</h3>
+  <p>Submit your email for updates! Tentative Launch date: Jan 1, 2024</p>
+  <a href="#">Sign Up Now!</a>
+</div>
+
+<div class="beta-testing">
+  <h3>Help us beta-test our software!</h3>
+  <p>Want a sneak peek at VetRelief and give us valuable feedback? Sign up for our beta program!</p>
+  <img src="https://placeimg.com/200/200/animals/arch" alt="Image of a dog">
+  <a href="#">Join the Beta!</a>
+</div>
+
 </div>
 
 </html>
