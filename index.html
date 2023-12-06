@@ -78,21 +78,47 @@ content="width=device-width, initial-scale=1.0">
         <input type="submit" value="Find Doctors">
     </form>
   
-<div id="lightbox" class="display">
-  <div class="lightbox-content">
-    <h2>Boost Your Post?</h2>
-    <p>Are any of these dates more urgently needed? VetRelief.com will prioritize your urgent dates over other hospitals relief dates by reaching out directly to available doctors and encouraging them to bid.</p>
-    <p>If you can incentivize candidates to bid by offering higher pay, accommodations, etc.. please specify here:</p>
-    <textarea id="incentives-field" placeholder="Enter incentives for doctors..."></textarea>
-    <p>Which dates would you like 'boosted' under the FLASH Financial Incentive Program?</p>
-    <ul id="date-list">
-      <li><input type="checkbox" name="dates[]" value="2023-12-10"> 2023-12-10</li>
-      <li><input type="checkbox" name="dates[]" value="2023-12-15"> 2023-12-15</li>
-    </ul>
-    <p>There is a $5 per date activation fee. If we are successful in our efforts to find relief coverage, our service fee is 12.5% of doctors bid fee OR $65, whichever is greater.</p>
+<body>
+  <div id="lightbox" class="display">
     <div class="lightbox-buttons">
       <button id="boost-button">Boost Selected Dates</button>
       <button id="close-button">Cancel</button>
     </div>
+  </div>
+
+  <script type="php">
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      // Extract data from form
+      $incentives = $_POST['incentives-field'];
+      $dates = $_POST['dates'];
+
+      // Validate data (e.g., check if dates are selected)
+
+      // Send data to VetRelief.com API or other processing logic
+
+      // Close the lightbox and show success message
+      echo "<script>document.getElementById('lightbox').classList.add('hidden'); alert('Your boost request has been submitted.');</script>";
+    }
+  </script>
+
+  <script>
+    function openLightbox() {
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+
+    document.getElementById('close-button').addEventListener('click', function() {
+      document.getElementById('lightbox').classList.add('hidden');
+    });
+
+    document.addEventListener('click', function(event) {
+      if (event.target === document.getElementById('lightbox')) {
+        document.getElementById('lightbox').classList.add('hidden');
+      }
+    });
+
+    document.getElementById('boost-button').addEventListener('click', function() {
+      // Submit form data and handle response
+    });
+  </script>
 </body>
 </html>
