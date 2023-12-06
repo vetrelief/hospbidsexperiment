@@ -77,6 +77,22 @@ content="width=device-width, initial-scale=1.0">
         </select>
         <input type="submit" value="Find Doctors">
     </form>
-
+  
+<div id="lightbox" class="hidden">
+  <div class="lightbox-content">
+    <h2>Boost Your Post?</h2>
+    <p>Are any of these dates more urgently needed? VetRelief.com will prioritize your urgent dates over other hospitals relief dates by reaching out directly to available doctors and encouraging them to bid.</p>
+    <p>If you can incentivize candidates to bid by offering higher pay, accommodations, etc.. please specify here:</p>
+    <textarea id="incentives-field" placeholder="Enter incentives for doctors..."></textarea>
+    <p>Which dates would you like 'boosted' under the FLASH Financial Incentive Program?</p>
+    <ul id="date-list">
+      <li><input type="checkbox" name="dates[]" value="2023-12-10"> 2023-12-10</li>
+      <li><input type="checkbox" name="dates[]" value="2023-12-15"> 2023-12-15</li>
+    </ul>
+    <p>There is a $5 per date activation fee. If we are successful in our efforts to find relief coverage, our service fee is 12.5% of doctors bid fee OR $65, whichever is greater.</p>
+    <div class="lightbox-buttons">
+      <button id="boost-button">Boost Selected Dates</button>
+      <button id="close-button">Cancel</button>
+    </div>
 </body>
 </html>
